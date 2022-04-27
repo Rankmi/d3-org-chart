@@ -1,8 +1,18 @@
 {
-  "name": "d3-org-chart",
-  "version": "2.6.0",
+  "name": "@rankmi/d3-org-chart",
+  "homepage": "https://github.com/Rankmi/d3-org-chart",
+  "version": "2.7.0",
   "module": "index",
+  "author": "Rankmi",
+  "license": "BSD-3-Clause",
   "description": "Highly customizable org chart, created with d3",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Rankmi/d3-org-chart.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "keywords": [
     "d3",
     "d3-module",
@@ -11,7 +21,6 @@
     "hierarchy",
     "employee"
   ],
-  "license": "BSD-3-Clause",
   "main": "build/d3-org-chart.min.js",
   "jsdelivr": "build/d3-org-chart.min.js",
   "unpkg": "build/d3-org-chart.min.js",
@@ -22,11 +31,6 @@
   "jsnext:main": "index",
   "bugs": {
     "url": "https://github.com/bumbeishvili/d3-organization-chart/issues"
-  },
-  "homepage": "https://github.com/bumbeishvili/d3-organization-chart#readme",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/bumbeishvili/d3-organization-chart.git"
   },
   "scripts": {
     "start": "nodemon ",
