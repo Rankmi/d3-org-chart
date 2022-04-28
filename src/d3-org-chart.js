@@ -1730,8 +1730,8 @@ export class OrgChart {
       };
       reader.readAsDataURL(xhr.response);
     };
-    xhr.setRequestHeader("Cache-Control", "no-cache");
     xhr.open("GET", url);
+    xhr.setRequestHeader("Cache-Control", "no-cache");
     xhr.responseType = "blob";
     xhr.send();
   }
