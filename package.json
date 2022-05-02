@@ -1,7 +1,7 @@
 {
   "name": "@rankmi/d3-org-chart",
   "homepage": "https://github.com/Rankmi/d3-org-chart",
-  "version": "2.7.1",
+  "version": "2.7.3",
   "module": "index",
   "author": "Rankmi",
   "license": "BSD-3-Clause",
@@ -36,6 +36,7 @@
     "start": "nodemon ",
     "_pretest": "rm -rf build && mkdir build && rollup -c --banner \"$(preamble)\"",
     "_test": "tape 'test/**/*-test.js'",
+    "build": "uglifyjs build/d3-org-chart.js -c -m -o build/d3-org-chart.min.js",
     "_prepublish": "npm run test && uglifyjs build/d3-org-chart.js -c -m -o build/d3-org-chart.min.js",
     "_postpublish": "zip -j build/d3-org-chart.zip -- LICENSE README.md build/d3-org-chart.js build/d3-org-chart.min.js",
     "pretest": "rm -rf build && mkdir build && rollup -g d3-selection:d3,d3-array:d3,d3-hierarchy:d3,d3-zoom:d3,d3-flextree:d3,d3-shape:d3,d3-group:d3  -f umd -n d3 -o build/d3-org-chart.js -- index.js",

@@ -4,6 +4,7 @@ import { tree, stratify } from "d3-hierarchy";
 import { zoom, zoomIdentity } from "d3-zoom";
 import { flextree } from "d3-flextree";
 import { linkHorizontal } from "d3-shape";
+import * as defaultAvatar from "./../picture.png";
 
 const d3 = {
   selection,
@@ -1729,6 +1730,9 @@ export class OrgChart {
         callback(reader.result);
       };
       reader.readAsDataURL(xhr.response);
+    };
+    xhr.onerror = function () {
+      callback(defaultAvatar);
     };
     xhr.open("GET", url);
     xhr.setRequestHeader("Cache-Control", "no-cache");
